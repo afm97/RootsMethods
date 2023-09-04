@@ -16,7 +16,7 @@ float newton_raphson(float x_0, int number_of_iterations, float acceptable_itera
 
         iterative_approach = pow(pow((x_n - x_0)/x_n,2),0.5);
 
-        printf(" \titeration %.3d |\titerative_approach %.8f|\tx %f |\tf %f\n", iteration,iterative_approach,x_n,f);
+        printf(" \titeration = %.3d |\terro = %.8f |\troot = %f |\tf(x) = %.5f \n", iteration,iterative_approach,x_n,f);
 
         f = function_calc(x_n); df = derivative_function_calc(x_n);
         x_0 = x_n;

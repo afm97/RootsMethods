@@ -22,7 +22,7 @@ float bisection(float a, float b, int number_of_iterations, float acceptable_ite
 
         iterative_approach = pow(pow((a - b)/c,2),0.5);
 
-        printf(" \titeration %.3d |\titerative_approach %.8f |\tx %f |\tf %f \n", iteration,iterative_approach,c,f_c);
+        printf(" \titeration = %.3d |\terro = %f |\troot = %f |\tf(x) = %f \n", iteration,iterative_approach,c,f_c);
         c = (a+b)/2;
         f_c = function_calc(c);
         
