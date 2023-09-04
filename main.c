@@ -9,7 +9,7 @@
 void main(){
 
     int iterations = 100;
-    float root_bisection, root_np,a = 1.0,b = 3.0, x0 = 3,acceptable_iterative_approach = 0.0001;
+    float root_bisection, root_np,a = -5.0,b = 0, x0 = -5,acceptable_iterative_approach = 0.0001;
 
     root_bisection = bisection(a,b,iterations,acceptable_iterative_approach);
     printf("\t---------------------------------------------------------------------------\n");
