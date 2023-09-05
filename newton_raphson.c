@@ -6,13 +6,14 @@ float newton_raphson(float x_0, float root,int number_of_iterations, float accep
 
     f = function_calc(x_0); df = derivative_function_calc(x_0);
 
-    if (f <= acceptable_iterative_approach && f >=-acceptable_iterative_approach){
-            return x_0;
-    }
-
     do{
         
         iteration++;
+
+        if (df == 0){
+            printf("Erro ao buscar raiz devido a derivada ser igual a 0!");
+            return 0;
+        };
 
         x_n = x_0 - f/df;
 
