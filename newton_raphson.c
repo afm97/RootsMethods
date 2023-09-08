@@ -6,6 +6,10 @@ float newton_raphson(float x_0, float root,int number_of_iterations, float accep
 
     f = function_calc(x_0); df = derivative_function_calc(x_0);
 
+    if (f <= acceptable_iterative_approach && f >= -acceptable_iterative_approach){
+        return x_0;
+    }
+
     do{
         
         iteration++;
@@ -18,7 +22,7 @@ float newton_raphson(float x_0, float root,int number_of_iterations, float accep
         x_n = x_0 - f/df;
 
         erro = root - x_n;
-        iterative_approach = pow(pow((x_n - x_0)/x_n,2),0.5);
+        iterative_approach = fabsf((x_n - x_0)/x_n);
 
         printf(" \titeration = %.3d |\terro de iteracao = %.10f |\terro = %.10f |\troot = %f |\tf(x) = %f \n", iteration,iterative_approach,erro,x_n,f);
 
