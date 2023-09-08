@@ -7,6 +7,10 @@ float bisection(float a, float b, float root,int number_of_iterations, float acc
 
     f_a = function_calc(a); f_b = function_calc(b); f_c = function_calc(c); 
 
+    if (f_c <= acceptable_iterative_approach && f_c >= -acceptable_iterative_approach){
+        return c;
+    }
+
     do{
 
         iteration++;
@@ -19,7 +23,7 @@ float bisection(float a, float b, float root,int number_of_iterations, float acc
             f_a = function_calc(a);
         }
 
-        iterative_approach = pow(pow((a - b)/c,2),0.5);
+        iterative_approach = fabsf((a - b)/c);
         erro = root - c;
 
         printf(" \titeration = %.3d |\terro de iteracao = %.10f |\terro = %.10f |\troot = %f |\tf(x) = %f \n", iteration,iterative_approach,erro,c,f_c);
